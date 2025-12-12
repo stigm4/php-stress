@@ -26,51 +26,44 @@ sudo apt install apache2-utils
 
 # 2. Instalar librerías de Python
 pip3 install -r requirements.txt
+```
 
-
-🛠️ Uso
-
+## 🛠️ Uso
+```bash
 python3 php-stress.py -u <URL> [opciones]
 
-  
+opciones:
+  -h, --help            Mostrar ayuda
+  -u, --url URL         URL Objetivo
+  -w, --wordlist WORDLIST
+                        Diccionario
+  -t, --threads THREADS
+                        Hilos simultáneos
+  --test                Auto-ejecutar estrés al endpoint más lento
+  --resultado FILE      Cargar resultados desde un archivo específico (ej: dominio_fecha.txt)
 
-Argumentos
-Flag	Descripción
--u, --url	URL Objetivo (ej: http://ejemplo.com)
--w, --wordlist	Ruta del diccionario (default: common.txt)
--t, --threads	Número de hilos simultáneos (default: 20)
---test	Activa la prueba de estrés automática con ab
---resultado	Carga un archivo de resultados previo en lugar de escanear
-Ejemplos
+```
 
-Escaneo básico (Buscar y medir tiempos):
-
-
-    
+### Escaneo básico (Buscar y medir tiempos):
+```bash
 python3 php-stress.py -u http://192.168.1.50 -w common.txt
+```
 
-  
-
-Escaneo agresivo + Prueba de estrés al final:
-code Bash
-
-    
+### Escaneo agresivo + Prueba de estrés al final:
+```bash
 python3 php-stress.py -u http://site.com -w big.txt -t 50 --test
-
+```
   
-
-Reutilizar resultados de un escaneo anterior:
-code Bash
-
-    
+### Reutilizar resultados de un escaneo anterior:
+```bash
 python3 php-stress.py --resultado site.com_2023-10-27.txt --test
+```
 
   
-
-⚠️ Disclaimer
+## ⚠️ Disclaimer
 
 Esta herramienta ha sido creada únicamente con fines educativos y para auditorías de seguridad autorizadas. El uso de esta herramienta contra objetivos sin consentimiento previo es ilegal. El autor no se hace responsable del mal uso.
-code Code
 
     
+---
 ---
