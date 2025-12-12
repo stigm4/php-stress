@@ -1,3 +1,4 @@
+![PHP-Stress](https://github.com/stigm4/php-stress/blob/main/PHP-Stress.png?raw=true)
 # PHP-Stress v0.01
 
 Herramienta de **Fuzzing Recursivo, Análisis de Latencia y Pruebas de Estrés** escrita en Python. 
